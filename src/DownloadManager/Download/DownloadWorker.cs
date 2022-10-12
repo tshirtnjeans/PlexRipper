@@ -214,7 +214,7 @@ namespace PlexRipper.DownloadManager.Download
                 // Throttle the stream to enable download speed limiting
                 var throttledStream = new ThrottledStream(responseStream, _downloadSpeedLimit);
 
-                byte[] buffer = new byte[4096];
+                byte[] buffer = new byte[524288000];
 
                 _timer.Start();
 
